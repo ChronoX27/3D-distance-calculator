@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Abstand - Punkt zu Ebene</title>
+</head>
+
+<body>
+    <h1>Abstand Punkt zu Ebene</h1>
+    <div class="dropdown">
+        <button class="dropdown-button">Wähle einen Modus</button>
+        <div class="dropdown-content">
+            <a href="PointToPoint.html">1 - Punkt zu Punkt</a>
+            <a href="PointToLine.html">2 - Punkt zu Gerade</a>
+            <a href="PlaneToLine.html">4 - Ebene zu Gerade</a>
+            <a href="PointToPlane.html">5 - Ebene zu Ebene</a>
+            <a href="LineToLine.html">6 - Gerade zu Gerade</a>
+        </div>
+    </div>
+
+
+    <p>Gib die Koordinaten des Punktes und die Koeffizenten der Ebene ein.</p>
+    <p>Drücke dann auf Berechen, um ihre Distanz zu ermitteln</p>
+    <form id="party2">
+        Punkt P: ( <input type="number" value="">
+        | <input type="number" value="">
+        | <input type="number" value=""> )<br>
+    </form>
+    <form id="party1">
+        Ebene E: <input type="number" value=""> x1 + 
+        <input type="number" value=""> x2 + 
+        <input type="number" value=""> x3 = 
+        <input type="number" value="">
+    </form> <br>
+
+
+    <button onclick="pointToPlane()" class="calculate-button">Berechnen</button>
+    <p id="result"></p>
+    <script src="main.js"></script>
+</body>
+
+</html>

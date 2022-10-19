@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Abstände im Raum </title>
+</head>
+
+<body>
+
+    <div class="dropdown">
+        <button class="dropdown-button">Wähle einen Modus</button>
+        <div class="dropdown-content">
+            <a href="PointToPoint.html">1 - Punkt zu Punkt</a>
+            <a href="PointToLine.html">2 - Punkt zu Gerade</a>
+            <a href="PointToPlane.html">3 - Punkt zu Ebene</a>
+            <a href="PlaneToLine.html">4 - Ebene zu Gerade</a>
+            <a href="PointToPlane.html">5 - Ebene zu Ebene</a>
+        </div>
+    </div>
+
+
+    <p>Drücke auf Berechen, um den Abtand zwischen den Punkten zu berechnen</p>
+
+    <form id="party1">
+        Punkt A: X <input type="number" name="A1" value="">
+        Y <input type="number" name="A2" value="">
+        Z <input type="number" name="A3" value="">
+    </form>
+    <form id="party2">
+        Punkt B: X <input type="number" name="B1" value="">
+        Y <input type="number" name="B2" value="">
+        Z <input type="number" name="B3" value=""> <br>
+    </form>
+    <br>
+
+    <button onclick="readValues()" class="calculate-button">Berechnen</button>
+    <p id="demo"></p>
+    <script src="main.js"></script>
+</body>
+
+</html>

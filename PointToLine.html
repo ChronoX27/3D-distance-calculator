@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Abstand - Punkt zu Gerade</title>
+</head>
+
+<body>
+
+    <h1>Abstand Punkt zu Gerade</h1>
+
+    <div class="dropdown">
+        <button class="dropdown-button">Wähle einen Modus</button>
+        <div class="dropdown-content">
+            <a href="PointToPoint.html">1 - Punkt zu Punkt</a>
+            <a href="PointToPlane.html">3 - Punkt zu Ebene</a>
+            <a href="PlaneToLine.html">4 - Ebene zu Gerade</a>
+            <a href="PointToPlane.html">5 - Ebene zu Ebene</a>
+            <a href="LineToLine.html">6 - Gerade zu Gerade</a>
+        </div>
+    </div>
+
+    <p>Gib die Koordinaten des Punktes und Vektoren der Gerade ein.</p>
+    <p>Drücke dann auf Berechen, um ihre Distanz zu ermitteln.</p>
+
+    <form id="party1">
+        Punkt P: ( <input type="number" value="">
+        | <input type="number" value="">
+        | <input type="number" value=""> )
+    </form>
+    <form id="party2">
+        Ortsvektor von g: ( <input type="number" value="">
+        | <input type="number" value="">
+        | <input type="number" value=""> )
+    </form>
+    <form id="party3">
+        Richtungsvektor von g: ( <input type="number" value="">
+        | <input type="number" value="">
+        | <input type="number" value=""> )
+    </form><br>
+
+
+    <button onclick="pointToLine()" class="calculate-button">Berechnen</button>
+    <p id="result"></p>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

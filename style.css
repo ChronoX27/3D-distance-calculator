@@ -1,0 +1,78 @@
+body {
+   font-family: 'Helvetica', sans-serif;
+   font-size: 18px;
+   color: #d4d4d4;
+   background-color: #1d1d1d;
+   padding-left: 50px;
+   padding-top: 30px;
+   line-height: 1.4;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+form {
+    line-height: 1.6;
+}
+
+input {
+    border: none;
+    border-radius: 2px;
+    width: 30px;
+    height: 17px;
+    background-color: #2291ad;
+}
+
+button {
+    background-color: #1b7288;
+    color: #d4d4d4;
+    padding: 16px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2291ad;
+}
+
+.line {
+    line-height: 1.4;
+}
+
+
+/*======== DROPDOWN =====================*/
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d4d4d4;
+    /* min-width: 120px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #3ea3bdcc;
+}
