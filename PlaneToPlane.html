@@ -19,14 +19,13 @@
             <a href="PointToLine.html">2 - Punkt zu Gerade</a>
             <a href="PointToPlane.html">3 - Punkt zu Ebene</a>
             <a href="PlaneToLine.html">4 - Ebene zu Gerade</a>
-            <a href="PlaneToPlane.html">5 - Ebene zu Ebene</a>
             <a href="LineToLine.html">6 - Gerade zu Gerade</a>
         </div>
     </div>
 
     <p>Gib die Koeffizenten der Ebenen ein.</p>
     <p>Drücke dann auf Berechen, um ihre Distanz zu ermitteln</p>
-    
+
     <form id="party2">
         Ebene E: <input type="number" value=""> x1 +
         <input type="number" value=""> x2 +
@@ -40,8 +39,9 @@
         <input type="number" value="">
     </form> <br>
 
-    <button onclick="readValues()" class="calculate-button">Berechnen</button>
-    <p id="demo"></p>
+    <button onclick="planeToPlane()" class="calculate-button">Berechnen</button>
+    <p id="result"></p>
+
     <script src="main.js"></script>
 </body>
 

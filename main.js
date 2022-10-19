@@ -97,7 +97,17 @@ function planeToPlane() {
     F[i] = f.elements[i].value;
   }
 
-  var t = E[0] / F[0]
+  
+
+  if (E[0] != 0) {
+    var t = E[0] / F[0]
+  }
+  else if (E[1] != 0) {
+    var t = E[1] / F[1]
+  }
+  else {
+    var t = E[2] / F[2]
+  }
    
   if (E[1] == t * F[1] && E[2] == t * F[2] && E[3] == t * F[3]) {
     var distance = "0, da die Ebenen identisch sind." 
@@ -105,8 +115,24 @@ function planeToPlane() {
   else if (E[1] != t * F[1] || E[2] != t * F[2]) {
     var distance = "=, da die Ebenen sich schneiden."
   }
+  else {
+    // Choose Point P on F
+    var P = [0, 0, 0]
+    if (F[0] != 0) {
+      P[0] = F[3] / F[0]
+    }
+    else if (F[1] != 0) {
+      P[1] = F[3] / F[1]
+    }
+    else {
+      P[2] = F[3] / F[2]
+    }
 
-
+    // Calc the distance between P and E like in 3
+    var numerator = Math.abs(E[0] * P[0] + E[1] * P[1] + E[2] * P[2] - E[3])
+    var denominator = Math.sqrt(E[0] ** 2 + E[1] ** 2 + E[2] ** 2)
+    var distance = numerator / denominator
+  }
 
   document.getElementById("result").innerHTML = ">> Abstand: " + distance;
 }
