@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="icon.jpg">
     <link rel="stylesheet" href="style.css">
-    <title>Abstände im Raum </title>
+    <title>Abstand - Ebene zu Ebene</title>
 </head>
 
 <body>
 
+    <h1>Abstand Ebene zu Ebene</h1>
     <div class="dropdown">
         <button class="dropdown-button">Wähle einen Modus</button>
         <div class="dropdown-content">
@@ -18,24 +19,26 @@
             <a href="PointToLine.html">2 - Punkt zu Gerade</a>
             <a href="PointToPlane.html">3 - Punkt zu Ebene</a>
             <a href="PlaneToLine.html">4 - Ebene zu Gerade</a>
-            <a href="PointToPlane.html">5 - Ebene zu Ebene</a>
+            <a href="PlaneToPlane.html">5 - Ebene zu Ebene</a>
+            <a href="LineToLine.html">6 - Gerade zu Gerade</a>
         </div>
     </div>
 
-
-    <p>Drücke auf Berechen, um den Abtand zwischen den Punkten zu berechnen</p>
-
-    <form id="party1">
-        Punkt A: X <input type="number" name="A1" value="">
-        Y <input type="number" name="A2" value="">
-        Z <input type="number" name="A3" value="">
-    </form>
+    <p>Gib die Koeffizenten der Ebenen ein.</p>
+    <p>Drücke dann auf Berechen, um ihre Distanz zu ermitteln</p>
+    
     <form id="party2">
-        Punkt B: X <input type="number" name="B1" value="">
-        Y <input type="number" name="B2" value="">
-        Z <input type="number" name="B3" value=""> <br>
+        Ebene E: <input type="number" value=""> x1 +
+        <input type="number" value=""> x2 +
+        <input type="number" value=""> x3 =
+        <input type="number" value="">
     </form>
-    <br>
+    <form id="party1">
+        Ebene F: <input type="number" value=""> x1 +
+        <input type="number" value=""> x2 +
+        <input type="number" value=""> x3 =
+        <input type="number" value="">
+    </form> <br>
 
     <button onclick="readValues()" class="calculate-button">Berechnen</button>
     <p id="demo"></p>
