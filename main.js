@@ -20,6 +20,7 @@ function pointToPoint() {
   document.getElementById("result").innerHTML = ">> Abstand: " + distance;
   }
 
+
 // ====== 2 - POINT TO LINE ======
 function pointToLine() {
   // Punkt
@@ -56,6 +57,7 @@ function pointToLine() {
   document.getElementById("result").innerHTML = ">> Abstand: " + distance;
 }
 
+
 // ====== 3 - POINT TO PLANE ======
 function pointToPlane() {
   var e = document.getElementById("party1");
@@ -83,6 +85,44 @@ function pointToPlane() {
 }
 
 
+// ====== 4 - PLANE TO LINE =======
+function planeToLine() {
+  // Ebene E
+  var e = document.getElementById("party1");
+  var E = [];
+  for (i = 0; i < e.length; i++) {
+    E[i] = e.elements[i].value;
+  }
+
+  // Ortsvektor S
+  var p = document.getElementById("party2");
+  var P = [];
+  for (i = 0; i < p.length; i++) {
+    P[i] = p.elements[i].value;
+  }
+
+  // Richtungsvektor V
+  var c = document.getElementById("party3");
+  var V = [];
+  for (i = 0; i < c.length; i++) {
+    V[i] = c.elements[i].value;
+  }
+
+  var check = E[0] * V[0] + E[1] * V[1] + E[2] * V[2];
+  if (check != 0) {
+    var distance = "0, da die Gerade die Ebene schneidet.";
+  }
+  else {
+    var numerator = Math.abs(E[0] * P[0] + E[1] * P[1] + E[2] * P[2] - E[3]);
+    var denominator = Math.sqrt(E[0] ** 2 + E[1] ** 2 + E[2] ** 2);
+    console.log(numerator, denominator);
+    var distance = numerator / denominator;
+  }
+
+  document.getElementById("result").innerHTML = ">> Abstand: " + distance;
+}
+
+
 // ====== 5 - PLANE TO PLANE ======
 function planeToPlane() {
   var e = document.getElementById("party1");
@@ -96,8 +136,6 @@ function planeToPlane() {
   for (i = 0; i < f.length; i++) {
     F[i] = f.elements[i].value;
   }
-
-  
 
   if (E[0] != 0) {
     var t = E[0] / F[0]
@@ -136,3 +174,6 @@ function planeToPlane() {
 
   document.getElementById("result").innerHTML = ">> Abstand: " + distance;
 }
+
+
+// ====== 6 - LINE TO LINE ========
